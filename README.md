@@ -9,7 +9,7 @@ Using this authentication code requires using SSH keys. Change your `authorized_
 
 Modify the paths for `python` and `ssh-otp.py` as appropriate.
 
-The `4rr7kc47sc5a2fgt` is a secret key that you should generate yourself (obviously, don't use this one). If you like, you can [generate a new secret key at random.org][2], or use any other method you trust. They key is a 16-character base32 (0-9a-v) string, so if you're using random.org, substitute any other letters or numbers for w-z.
+The `4rr7kc47sc5a2fgt` is a secret key that you should generate yourself (obviously, don't use this one). If you like, you can [generate a new secret key at random.org][2], or use any other method you trust. They key is a 16-character base32 (a-z2-7) string, so if you're using random.org, substitute any other letters or numbers for 0, 1, 8, and 9.
 
 Configure your Google Authenticator mobile app by adding a new entry with the same secret key. Be sure the clock on your mobile device is reasonably synchronised with your ssh server.
 
