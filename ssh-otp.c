@@ -55,16 +55,21 @@ int main(int argc, char *argv[])
 {
     int i;
     unsigned char sbytes[10];
-    char code[7], input[10];
+    char code[7], input_a[10];
+    char *input;
     time_t now;
 
     if (argc < 2) {
         exit(1);
     }
 
-    fprintf(stderr, "Enter the validation code: ");
-    if (fgets(input, sizeof(input), stdin) == NULL) {
-        exit(1);
+    input = getenv("OTP_TOKEN");
+    if (!input || strcmp(input, "") == 0) {
+        fprintf(stderr, "Enter the validation code: ");
+        if (fgets(input_a, sizeof(input_a), stdin) == NULL) {
+            exit(1);
+        }
+        input = input_a;
     }
 
     if (!b32decode(argv[1], sbytes)) {
