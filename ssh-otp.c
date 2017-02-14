@@ -1,5 +1,6 @@
 #include <string.h>
 #include <unistd.h>
+#include <ctype.h>
 
 #include <openssl/hmac.h>
 
